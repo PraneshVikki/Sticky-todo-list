@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #9ac8f5;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,200px);
+    position: relative;
+}
+.container{
+    width: 200px;
+    height: 200px;
+    background: #9ac8f5;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-add{
+    color: #828c919a;
+    font-size: 150px;
+}
+.sticky{
+    width: 200px;
+    color: white;
+    height: 200px;
+    background: #9ac8f5;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+textarea{
+    resize: none;
+    background: #000;
+    
+}
+
+.sticky::placeholder{
+    font-size: 20px;
+}
+.sticky:hover,.sticky:active{
+    box-shadow: inset 3px 3px 10px 4px rgb(129, 128, 128);
+    
+}
+
+span:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-75%,-75%);
+    background: radial-gradient(rgb(255, 255, 255),transparent);
+    border-radius: 50%;
+}
+span{
+    bottom: 0px;
+    position: absolute;
+    box-shadow: inset 0px 0px 10px rgb(243, 243, 243);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-1200%);
+    }
+}
